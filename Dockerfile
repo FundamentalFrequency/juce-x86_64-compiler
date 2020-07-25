@@ -1,3 +1,5 @@
+# use 20.04 as base image
+# this has a more recent CMake version
 FROM ubuntu:20.04
 
 ARG DEBIAN_FRONTEND=noninteractive
