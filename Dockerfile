@@ -8,6 +8,7 @@ ENV TZ=America/Chicago
 RUN apt-get update && apt-get install -y --no-install-recommends \
     tzdata \
     git \
+    ca-certificates \ 
     build-essential \
     cmake \
     g++ \
