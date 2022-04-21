@@ -9,6 +9,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     tzdata \
     git \
     ca-certificates \ 
+    zip \
     build-essential \
     cmake \
     g++ \
