@@ -1,30 +1,23 @@
-# use 20.04 as base image
-# this has a more recent CMake version
 FROM ubuntu:20.04
 
 ARG DEBIAN_FRONTEND=noninteractive
 ENV TZ=America/Chicago
 
+# JUCE Linux Dependencies
+# https://github.com/juce-framework/JUCE/blob/master/docs/Linux%20Dependencies.md
 RUN apt-get update && apt-get install -y --no-install-recommends \
     tzdata \
     git \
-    zip \
     ca-certificates \ 
     build-essential \
     cmake \
     g++ \
-    libgtk-3-dev \
+    clang \
+    llvm \
+    libasound2-dev libjack-jackd2-dev \
+    ladspa-sdk \
+    libcurl4-openssl-dev  \
     libfreetype6-dev \
-    libx11-dev \
-    libxinerama-dev \
-    libxrandr-dev \
-    libxcursor-dev \
-    mesa-common-dev \
-    libasound2-dev \
-    freeglut3-dev \
-    libxcomposite-dev \
-    libcurl4-openssl-dev \
+    libx11-dev libxcomposite-dev libxcursor-dev libxcursor-dev libxext-dev libxinerama-dev libxrandr-dev libxrender-dev \
     libwebkit2gtk-4.0-dev \
-    ladspa-sdk
-
-
+    libglu1-mesa-dev mesa-common-dev
