@@ -15,6 +15,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     g++ \
     clang \
     llvm \
+    lld \
     libasound2-dev libjack-jackd2-dev \
     ladspa-sdk \
     libcurl4-openssl-dev  \
